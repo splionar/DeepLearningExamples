@@ -183,7 +183,7 @@ The following command will launch the container and mount the `./data` directory
     
 ```
 mkdir data results
-docker run -it --runtime=nvidia --shm-size=8g --ulimit memlock=-1 --ulimit stack=67108864 --rm -v ${PWD}/data:/data -v ${PWD}/results:/results nnunet:latest /bin/bash
+docker run -it --gpus all --shm-size=8g --ulimit memlock=-1 --ulimit stack=67108864 --rm -v ${PWD}/data:/data -v ${PWD}/results:/results nnunet:latest /bin/bash
 ```
 
 4. Prepare BraTS dataset.
